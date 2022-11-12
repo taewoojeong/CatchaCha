@@ -19,6 +19,7 @@
 		D502A000291FE96B00737765 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5029FFF291FE96B00737765 /* PartyViewController.swift */; };
 		D502A002292006DB00737765 /* PartyJoinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A001292006DB00737765 /* PartyJoinedViewController.swift */; };
 		D559B3BA291FD35C008F585C /* PartyloadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559B3B9291FD35C008F585C /* PartyloadingViewController.swift */; };
+		D56CE46D29203BD500C2B2FA /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CE46C29203BD500C2B2FA /* PayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D5029FFF291FE96B00737765 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 		D502A001292006DB00737765 /* PartyJoinedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyJoinedViewController.swift; sourceTree = "<group>"; };
 		D559B3B9291FD35C008F585C /* PartyloadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyloadingViewController.swift; sourceTree = "<group>"; };
+		D56CE46C29203BD500C2B2FA /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				D5029FFF291FE96B00737765 /* PartyViewController.swift */,
 				D502A001292006DB00737765 /* PartyJoinedViewController.swift */,
 				BE3821462920178D00B23A58 /* MakePartyViewController.swift */,
+				D56CE46C29203BD500C2B2FA /* PayViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D502A000291FE96B00737765 /* PartyViewController.swift in Sources */,
+				D56CE46D29203BD500C2B2FA /* PayViewController.swift in Sources */,
 				BE3821472920178D00B23A58 /* MakePartyViewController.swift in Sources */,
 				D559B3BA291FD35C008F585C /* PartyloadingViewController.swift in Sources */,
 				D502A002292006DB00737765 /* PartyJoinedViewController.swift in Sources */,
