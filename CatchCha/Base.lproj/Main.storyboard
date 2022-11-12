@@ -3,6 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,6 +61,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWk-SP-T5E">
+                                <rect key="frame" x="0.0" y="93" width="393" height="666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riI-hO-6eS">
+                                <rect key="frame" x="20" y="118" width="353" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="어디로 갈까요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y59-Gf-Xk9">
+                                        <rect key="frame" x="10" y="5" width="307" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="destinationTextFieldDidTap:" destination="vbR-Eb-K5k" eventType="editingDidEnd" id="ycw-k3-qmO"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="questionmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q4S-IO-XiF">
+                                        <rect key="frame" x="325" y="17" width="19.666666666666657" height="28.666666666666664"/>
+                                        <color key="tintColor" name="buttonyellow"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Q4S-IO-XiF" secondAttribute="bottom" constant="15" id="8Z4-LH-me1"/>
+                                    <constraint firstAttribute="height" constant="60" id="FMb-3n-quq"/>
+                                    <constraint firstItem="Q4S-IO-XiF" firstAttribute="top" secondItem="riI-hO-6eS" secondAttribute="top" constant="15" id="SAh-b8-HId"/>
+                                    <constraint firstItem="Y59-Gf-Xk9" firstAttribute="leading" secondItem="riI-hO-6eS" secondAttribute="leading" constant="10" id="XDI-6J-E8e"/>
+                                    <constraint firstItem="Y59-Gf-Xk9" firstAttribute="top" secondItem="riI-hO-6eS" secondAttribute="top" constant="5" id="bBn-BH-Umw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y59-Gf-Xk9" secondAttribute="bottom" constant="5" id="dlc-U3-4bq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q4S-IO-XiF" secondAttribute="trailing" constant="15" id="hsF-3W-xx7"/>
+                                    <constraint firstItem="Q4S-IO-XiF" firstAttribute="leading" secondItem="Y59-Gf-Xk9" secondAttribute="trailing" constant="10" id="nrU-Cd-aB7"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0Q-2v-9b8">
                                 <rect key="frame" x="250" y="195" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,23 +109,33 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BAT-nj-O5h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="riI-hO-6eS" firstAttribute="leading" secondItem="BAT-nj-O5h" secondAttribute="leading" constant="20" id="Exp-FK-Xbm"/>
+                            <constraint firstItem="riI-hO-6eS" firstAttribute="top" secondItem="fak-zy-Zmn" secondAttribute="topMargin" constant="15" id="G0E-Ne-lbd"/>
+                            <constraint firstItem="BAT-nj-O5h" firstAttribute="trailing" secondItem="riI-hO-6eS" secondAttribute="trailing" constant="20" id="iAK-oK-vVF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2TZ-Br-7uR"/>
+                    <connections>
+                        <outlet property="destinationInputView" destination="riI-hO-6eS" id="CUo-9r-qUe"/>
+                        <outlet property="destinationMapkit" destination="KWk-SP-T5E" id="LXJ-hc-dnM"/>
+                        <outlet property="destinationTextField" destination="Y59-Gf-Xk9" id="tDR-dd-v7g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZ0-Qh-BUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-332"/>
+            <point key="canvasLocation" x="133.58778625954199" y="-332.3943661971831"/>
         </scene>
         <!--Make Party View Controller-->
         <scene sceneID="8is-O8-XdY">
             <objects>
                 <viewController id="f7N-Lf-lot" customClass="MakePartyViewController" customModule="CatchCha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzD-K8-RO6" customClass="Make">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph0-Jk-MM1">
-                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="Catchy 만들기" id="dxG-7S-GTk">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="bLQ-yW-xfL">
@@ -99,7 +147,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AMI-Lv-Azj">
-                                <rect key="frame" x="12" y="139" width="369" height="24"/>
+                                <rect key="frame" x="12" y="171" width="369" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인하대 정문" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG7-SG-ubX">
                                         <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="24"/>
@@ -116,17 +164,17 @@
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l5y-Up-f8h">
-                                <rect key="frame" x="12" y="175" width="369" height="4"/>
+                                <rect key="frame" x="12" y="207" width="369" height="4"/>
                                 <color key="progressTintColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최대 대기 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvr-ka-gc6">
-                                <rect key="frame" x="12" y="227" width="369" height="20.333333333333343"/>
+                                <rect key="frame" x="12" y="259" width="369" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-1B-15b">
-                                <rect key="frame" x="12" y="271.33333333333331" width="369" height="32"/>
+                                <rect key="frame" x="12" y="303.33333333333331" width="369" height="32"/>
                                 <segments>
                                     <segment title="1분"/>
                                     <segment title="3분"/>
@@ -140,13 +188,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발 최소 인원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkA-xx-Udg">
-                                <rect key="frame" x="12" y="350.33333333333331" width="369" height="20.333333333333314"/>
+                                <rect key="frame" x="12" y="382.33333333333331" width="369" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-17-iwC">
-                                <rect key="frame" x="12" y="394.66666666666669" width="369" height="32"/>
+                                <rect key="frame" x="12" y="426.66666666666669" width="369" height="32"/>
                                 <segments>
                                     <segment title="1명"/>
                                     <segment title="2명"/>
@@ -160,7 +208,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-C4-rhP">
-                                <rect key="frame" x="12" y="736.66666666666663" width="369" height="34.333333333333371"/>
+                                <rect key="frame" x="12" y="722.66666666666663" width="369" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Setting Catchy">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -894,7 +942,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3dR-ld-nbo"/>
+        <segue reference="P3q-4r-80g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
@@ -904,6 +952,10 @@
         <image name="people" width="40" height="40"/>
         <image name="peoplex" width="40" height="40"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="buttonyellow">
+            <color red="0.92156862745098034" green="0.79607843137254897" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
