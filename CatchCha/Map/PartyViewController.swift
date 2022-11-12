@@ -18,11 +18,20 @@ class PartyViewController: UIViewController {
     var people: Int?
     @IBOutlet weak var peopleLabel: UILabel!
     var minute: Int?
-    
+    var addminute: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        if minute == 0 {
+            addminute = 1
+        } else if minute == 0 {
+            addminute = 3
+        } else if minute == 0 {
+            addminute = 5
+        } else {
+            addminute = 10
+        }
         let date = Date()
-        let date1 = Calendar.current.date(byAdding: .minute, value: 5, to: date)
+        let date1 = Calendar.current.date(byAdding: .minute, value: addminute, to: date)
         print(date1!)
         var dateFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()

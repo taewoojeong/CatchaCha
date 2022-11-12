@@ -460,12 +460,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1분 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPr-rG-Kf3">
-                                <rect key="frame" x="301" y="586" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-KM-Q0O">
                                 <rect key="frame" x="20" y="753" width="353" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -493,7 +487,6 @@
                             <constraint firstItem="Src-Wz-ksp" firstAttribute="trailing" secondItem="6e6-n7-Xtu" secondAttribute="trailing" id="6ds-Tr-r5V"/>
                             <constraint firstItem="oFa-Qa-E58" firstAttribute="leading" secondItem="yGM-Fm-CjA" secondAttribute="leading" id="77Z-Qs-PoU"/>
                             <constraint firstItem="AOH-NQ-dsl" firstAttribute="centerY" secondItem="Uzg-AZ-ZDj" secondAttribute="centerY" id="7xS-vv-LiT"/>
-                            <constraint firstItem="yGM-Fm-CjA" firstAttribute="trailing" secondItem="QPr-rG-Kf3" secondAttribute="trailing" constant="36" id="8Gf-aG-bWa"/>
                             <constraint firstItem="yGM-Fm-CjA" firstAttribute="trailing" secondItem="mBf-cU-RrW" secondAttribute="trailing" constant="20" id="8PS-Jm-sOq"/>
                             <constraint firstItem="6e6-n7-Xtu" firstAttribute="centerY" secondItem="jB0-CP-nYM" secondAttribute="centerY" id="8Yv-MG-dao"/>
                             <constraint firstItem="yGM-Fm-CjA" firstAttribute="bottom" secondItem="gpg-KM-Q0O" secondAttribute="bottom" constant="20" id="8fj-WX-tch"/>
@@ -539,7 +532,6 @@
                             <constraint firstItem="vAW-fF-QsC" firstAttribute="centerY" secondItem="lbk-y9-RWc" secondAttribute="centerY" id="rs3-BV-NrQ"/>
                             <constraint firstItem="9Lc-vi-bqp" firstAttribute="centerY" secondItem="Z3i-a1-TBN" secondAttribute="centerY" id="tKT-Cn-Fir"/>
                             <constraint firstItem="mBf-cU-RrW" firstAttribute="top" secondItem="lYM-ZQ-RbQ" secondAttribute="bottom" constant="11" id="urx-J3-RZh"/>
-                            <constraint firstItem="QPr-rG-Kf3" firstAttribute="centerY" secondItem="2CY-to-f6e" secondAttribute="centerY" id="zc0-zW-2W0"/>
                             <constraint firstItem="RQe-6g-Czq" firstAttribute="top" secondItem="ygb-k6-kvw" secondAttribute="bottom" constant="5" id="zgN-cs-5np"/>
                         </constraints>
                     </view>
@@ -806,7 +798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IJ-Xm-A1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3891" y="-332"/>
+            <point key="canvasLocation" x="3555" y="-332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6n8-tL-WeI">
